@@ -10,7 +10,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
 </head>
 <body>
-    <div class="container-fluid bg-dark text-white p-5 text-center">
+    <div>
+       <div class="container-fluid bg-dark text-white p-5 text-center">
         <h1>TODO LIST</h1>
     </div>
     <div id="principal">
@@ -27,18 +28,26 @@
           </nav>
           
         <main>
-            <div id="cadastrar" style="display: block;">
-                <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center;">Adicionar Tarefas</h2>
-                <div class="input-group mb-3">
-                    <span class="input-group-text"><b>DESCREVA A TAREFA</b></span>
-                    <input type="text" class="form-control">
-                  </div>
-                  <div class="input-group mb-3">
-                    <span class="input-group-text"><b>INSIRA O INTERVALO</b></span>
-                    <input type="text" class="form-control">
-                  </div>  
-                  <div class="input-group mb-3"><button type="button" class="container btn btn-dark mx-auto">Adicionar</button></div>
-            </div>
+            <div class="card my-3">
+                <div class="card-body">
+                    <div id="cadastrar" style="display: block;">
+                        <h2 style="font-family: 'Times New Roman', Times, serif; text-align: center; padding: 20px;">Adicionar Tarefas</h2>
+                        <div class="container">
+                            <div class="input-group mb-3">
+                                <span class="input-group-text"><b>DESCREVA A TAREFA</b></span>
+                                <input type="text" class="form-control">
+                              </div>
+                              <div class="input-group mb-3">
+                                <span class="input-group-text"><b>INSIRA O INTERVALO</b></span>
+                                <input type="text" class="form-control">
+                              </div>
+                    
+                          <div style="padding: 2;" class="input-group mb-3"><button type="button" class="container btn btn-dark mx-auto">Adicionar</button></div> </div>
+                    </div>
+                </div>
+            </div>  
+    </div>
+   
               
             <div id="exibir">
                 <h2 style="text-align: center; font-family: 'Times New Roman', Times, serif;">Tarefas Adicionadas: </h2>
