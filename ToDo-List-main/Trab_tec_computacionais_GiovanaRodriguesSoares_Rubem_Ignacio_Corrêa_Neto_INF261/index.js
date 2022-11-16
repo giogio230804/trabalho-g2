@@ -46,6 +46,16 @@ function cadastrar(){
     document.getElementById("exibir").style.display = "none";
 }
 
-function login(email, senha){
-    
+function login(email, nome, login, senha, senha2){
+    nome = document.getElementById("nome").value;
+    email = document.getElementById("email").value;
+    login = document.getElementById("login").value;
+    senha = document.getElementById("senha").value;
+    senha2 = document.getElementById("senha2").value;
+    if (senha != senha2 ){
+        alert("As senhas estão diferentes!")
+    }
+    if(nome == null || nome == ""){
+        alert("O nome é vazio!")
+    }
 }
