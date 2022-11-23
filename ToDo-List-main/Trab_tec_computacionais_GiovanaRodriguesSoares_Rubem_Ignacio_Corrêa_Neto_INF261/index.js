@@ -4,6 +4,8 @@ function adicionar(){
     const txt2 = (document.querySelector("#txt2").value)
     const concluir = document.createElement('button')
     const editar = document.createElement('button')
+    const resultado = document.createElement("div")
+    resultado.className = "resultado"
     concluir.innerHTML= "Concluída"
     editar.innerHTML = "Editar"
     const novaLi = document.createElement('h4');
@@ -28,21 +30,28 @@ function adicionar(){
         const eddet = window.prompt("Entre com o detalhamento")
         novaLi.innerHTML = "TAREFA: "+ ed + "<br> DETALHAMENTO: " + eddet;
     })
-    document.getElementById("resultado").appendChild(novaLi);
-    document.getElementById("resultado").appendChild(excluir);
-    document.getElementById("resultado").appendChild(concluir);
-    document.getElementById("resultado").appendChild(editar);
-    document.getElementById('resultado').appendChild(br)
+    resultado.appendChild(novaLi);
+    resultado.appendChild(excluir);
+    resultado.appendChild(concluir);
+    resultado.appendChild(editar);
+    resultado.appendChild(br)
     
+    document.getElementById("campo").appendChild(resultado);
     document.querySelector("#txt").value = ""
     document.querySelector("#txt2").value = ""
 }
 function exibir(){
     document.getElementById("cadastrar").style.display = "none";
     document.getElementById("exibir").style.display = "block";
+    document.getElementById("dados").style.display = "none";
 }
 function cadastrar(){
     document.getElementById("cadastrar").style.display = "block";
     document.getElementById("exibir").style.display = "none";
+    document.getElementById("dados").style.display = "none";
 }
-
+function exibirdados(){
+    document.getElementById("cadastrar").style.display = "none";
+    document.getElementById("exibir").style.display = "none";
+    document.getElementById("dados").style.display = "block";
+}
